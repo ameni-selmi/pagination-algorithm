@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPERATING SYSTEM</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/learning.min.css" rel="stylesheet">
+    <link href="css/operating_system.css" rel="stylesheet">
+    <audio src="music/Relaxing_Piano_Music.mp3" autoplay="autoplay" loop="loop" id="mySound_op"></audio>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <img src="./img/logos/writingPen.png" alt="">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Learning</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#check_up_button">Already know this ?</a>
+                    </li>
+
+                    <a class="nav-link text-right"><img src="./img/sound_off.png" id="imgsoundoff_op" onclick="soundoff_op()"></a>
+                    <a class="nav-link text-right"><img src="./img/sound_on.png" id="imgsoundon_op" onclick="soundon_op()"></a>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-left">
+                    <h2 class="section-heading text-uppercase">What is a memory in OS ?</h2>
+                    <p class="text-mutedd">Memory is a hardware device that your computer uses to load the operating system and run programs. It consists of one or more RAM chips (Random Access Memory) that each have several memory modules. The amount of real memory in a computer
+                        is limited to the amount of RAM installed. Common memory sizes are 256MB, 512MB, and 1GB. Because your computer has a finite amount of RAM, it is possible to run out of memory when too many programs are running at one time. This
+                        is where <mark>virtual memory</mark> comes in.</p>
+                </div>
+                <div class="col-lg-12 text-left">
+                    <h2 class="section-heading text-uppercase">What is a virtual memory ?</h2>
+                    <p class="text-mutedd">Virtual memory increases the available memory your computer has by enlarging the <mark>"address space" </mark>or places in memory where data can be stored. It does this by using hard disk space for additional memory allocation; however,
+                        since the hard drive is much slower than the RAM, data stored in virtual memory must be mapped back to real memory in order to be used.With the help of virtual memory, all the space of Hard Disk can be used as the logical memory
+                        so that a user can execute any number of programs.</p>
+                </div>
+                <div class="col-lg-12 text-left">
+                    <h2 class="section-heading text-uppercase">Benefits of a virtual memory :</h2>
+                    <ol id="benefits">
+                        <li>Unused Address Space :
+                            <p class="text-mutedd">With the help of Unused Address Space, a user may execute any number of programs because all the actual addresses will be treated as the logical addresses. All the programs that are given by the user will be stored into the
+                                Disk Space and all the programs will be stored into the <mark>Physical Address Space</mark> but they will be treated as they are stored into the <mark>Logical Address Space</mark>.
+                        </li>
+                        <li>Increased degree of Multiprogramming :
+                            <p class="text-mutedd">With the help of virtual memory we can execute many programs at one time because many programs can be fit in the physical memory so that more programs can be stored into the memory but this will not increase the response time
+                                of the CPU, means this will not affect the execution of the programs.
+                            </p>
+                        </li>
+                        <li>Decrease Number of Input/Output Operations :
+                            <p class="text-mutedd">There will be less operations that are used to perform <mark>the swapping</mark> of the processes. All the programs will be automatically loaded into the memory when they are needed.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-12 text-left">
+                    <h2 class="section-heading text-uppercase">The disadvantage of virtual memory :</h2>
+                    <p class="text-mutedd">The process of mapping data back and forth between the hard drive and the RAM takes longer time than accessing directly to it from the memory. This means that the more virtual memory is used, the more it will slow your computer down.
+                        While virtual memory enables your computer to run more programs than it could. Otherwise, it is best to have as much physical memory as possible. This allows your computer to run most programs directly from the RAM, avoiding the
+                        need to use virtual memory.<br>Having more RAM means your computer works less, making it a faster and happier machine!</p>
+                </div>
+                <div class="col-lg-12 text-left">
+                    <h2 class="section-heading text-uppercase">Types of virtual memory :</h2>
+                    <p class="text-mutedd">These are the two most common approaches:</p>
+                    <ol id="benefits">
+                        <li>Paging :
+                            <p class="text-mutedd">Paging divides memory into fixed-size blocks or paging files, usually approximately 4 KB in size. When a computer uses up its RAM, pages not in use are transferred to the section of the hard drive designated for virtual memory
+                                using a swap file. </p>
+                            <p class="text-mutedd">A swap file is a space set aside on the hard drive as the virtual memory extensions of the computer's RAM. When the swap file is needed, it is sent back to the RAM using a process called <mark>page swapping</mark>. This system
+                                ensures that computer's OS and applications do not run out of real memory.</p>
+                            <p class="text-mutedd">The blocks of the virtual memory space are called <mark>pages </mark>and the blocks of the physical address space are called <mark>frames</mark>. Each page can be individually mapped to a frame, which makes it possible to split
+                                larger memory regions into non-continuous physical frames.</p>
+                            <img class="imgg" src="img/paging.png" alt="">
+                            <p class="example-text"> In the example above, we have a page size of 50 bytes, which means that each of the memory regions is split into three pages. Each page is mapped to a frame individually, so a continuous virtual memory region can be mapped
+                                to non-continuous physical frames. This mapping is done by the MMU (Memory Management Unit) which is a hardware device that handles memory operations. This allows us to start the third instance of the program without performing
+                                any defragmentation before.</p>
+                            <p class="text-mutedd"> We saw that each of the potentially millions of pages is individually mapped to a frame. This mapping information needs to be stored somewhere which is a table structure called <mark>Page Table</mark>.<br>For our above example,
+                                the page tables would look like this:</p>
+                            <img class="imgg" src="img/paging-page-tables.png" alt="">
+                            <p class="text-mutedd">Here is an example of converting a logical address to a physical address:</p>
+
+                            <img class="imgg" src="img/Translation.png" alt="">
+                            <h4 class="note">What is a Page Fault ?</h4>
+                            <p class="text-mutedd">A page fault occurs when a program attempts to access data or code that is in its address space, but is not currently located in the system RAM. <br>So when page fault occurs then following sequence of events happens :</p>
+                            <img class="imgg" src="img/page-fault.png" alt="">
+                            <ol>
+                                <li>
+                                    <p class="text-mutedd">An assembly program is started to save the general registers and other volatile information to keep the OS from destroying it.</p>
+                                </li>
+                                <li>
+                                    <p class="text-mutedd">Operating system finds that a page fault has occurred and tries to find out which virtual page is needed. Some times hardware register contains this required information. If not, the operating system must retrieve PC,
+                                        fetch instruction and find out what it was doing when the fault occurred.</p>
+                                </li>
+                                <li>
+                                    <p class="text-mutedd">Once virtual address caused page fault is known, system checks to see if address is valid and checks if there is no protection access problem.</p>
+                                </li>
+                                <li>
+                                    <p class="text-mutedd">If the virtual address is valid, the system checks to see if a page frame is free. If no frames are free, the page replacement algorithm is run to remove a page.</p>
+                                </li>
+                                <li>
+                                    <p class="text-mutedd">If frame selected is dirty, page is scheduled for transfer to disk, context switch takes place, fault process is suspended and another process is made to run until disk transfer is completed.</p>
+                                </li>
+                                <li>
+                                    <p class="text-mutedd">As soon as page frame is clean, operating system looks up disk address where needed page is, schedules disk operation to bring it in..</p>
+                                </li>
+                                <li>
+                                    <p class="text-mutedd">When disk interrupt indicates page has arrived, page tables are updated to reflect its position, and frame marked as being in normal state.</p>
+                                </li>
+                                <li>
+                                    <p class="text-mutedd">Faulting instruction is backed up to state it had when it began and PC is reset. Faulting is scheduled, operating system returns to routine that called it.</p>
+                                </li>
+                                <li>
+                                    <p class="text-mutedd">Assembly Routine reloads register and other state information, returns to user space to continue execution.</p>
+                                </li>
+                            </ol>
+                            <h4 class="note">The problem with Paging :</h4>
+                            <p class="text-mutedd">Paging causes the <mark>internal fragmentation </mark> which occurs because not every memory region is an exact multiple of the page size. <br>Imagine a program of size 101 in the above example: It would still need three pages
+                                of size 50, so it would occupy 49 bytes more than needed.</p>
+
+                            <p class="text-mutedd">There are 3 algorithms of paging</p>
+                            <ol>
+                                <li>
+                                    <mark>First In First Out (FIFO) :</mark>
+                                    <p class="text-mutedd">This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages in the memory in a queue, the oldest page is in the front of the queue. When a page needs to be replaced,
+                                        the page in the front of the queue is selected for removal.</p>
+                                    <p class="text-mutedd">Here is an example of FIFO:</p>
+                                    <video loop controls class="myVideo">
+                                        <source src="./Videos/Example_FIFO.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="example-text">Initially all slots are empty, so when 7, 0, 1 come, they are allocated to the empty slots <i class="fa fa-arrow-right"></i> 3 Page Faults.
+
+                                        <br>When 2 comes, it is not available in memory so it replaces the oldest page slot 7. <i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                        <br>Then 0 comes, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>When 3 comes, it is not available in memory so it replaces the oldest page slot 0. <i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                        <br>When 4 comes, it is also not available in memory so it replaces the oldest page slot 1. <i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                        <br>Finally when 2 comes it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                    </p>
+
+                                    <p class="text-mutedd">
+                                        <U><B>Note :</B></U>
+                                        <br>Belady’s anomaly proves that it is possible to have more page faults when increasing the number of page frames while using the First In First Out (FIFO) page replacement algorithm. For example, if we consider
+                                        the reference string 3, 2, 1, 0, 3, 2, 4, 3, 2, 1, 0, 4 and 3 slots, we get 9 total page faults, but if we increase slots to 4, we get 10 page faults.</p>
+                                </li>
+                                <li>
+                                    <mark>Least Recently Used (LRU) :</mark>
+                                    <p class="text-mutedd">In this algorithm, the pages which will be replaced are those which are the least recently used.</p>
+                                    <p class="text-mutedd">Here is an example of LRU:</p>
+                                    <video loop controls class="myVideo2">
+                                        <source src="./Videos/Example_LRU.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="example-text">Initially all slots are empty, so when 7, 0, 1 come, they are allocated to the empty slots <i class="fa fa-arrow-right"></i> 3 Page Faults.
+
+                                        <br>When 2 comes, it will take the place of 7 because it is the least recently used. <i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                        <br>Then 0 comes, it is already in memory but it overwrites the old 0 to create a new one. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>When 3 comes, it is not available in memory so it replaces the least recently used page slot 1. (because 0 comes once again, it is overwritten. Meanwhile, 2 is not the least recently used). <i class="fa fa-arrow-right"></i>                                        1 Page Fault.
+
+                                        <br>Then 4 comes, it is not available in memory so it replaces the least recently used page slot 2. (because 0 comes once again, it is overwritten. Meanwhile, 3 is not the least recently used). <i class="fa fa-arrow-right"></i>                                        1 Page Fault.
+                                        <br>Finally when 2 comes again it is not available in memory so it replaces the least recently used page slot 0. (both 3 and 4 are not the least recently used).<i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                    </p>
+                                </li>
+                                <li>
+                                    <mark>Optimal Page replacement :</mark>
+                                    <p class="text-mutedd">In this algorithm, the pages which will be replaced are those which will not be used for the longest duration of time in the future.</p>
+                                    <p class="text-mutedd">Here is an example of Optimal:</p>
+                                    <video loop controls class="myVideo2">
+                                        <source src="./Videos/Example_OPTIMAL.mp4" type="video/mp4">
+                                    </video>
+                                    <p class="example-text">Initially all slots are empty, so when 0 and 9 come, they are allocated to the empty slots <i class="fa fa-arrow-right"></i> 2 Page Faults.
+
+                                        <br>When 0 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>Then 1 comes, there is still an empty slot so it will be allocated there.<i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                        <br>As 8 comes, it will take the place of 0 because it will not be used anymore in the future.(As 0 comes before 9, it is chosen to be replaced by 8). <i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                        <br>Then 1 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>When 8 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>Then 7 comes, it will take the place of 9 because it will not be used anymore in the future.(See the string reference from 7 onwards). <i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                        <br>When 8 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>Then 7 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>When 1 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>As 2 comes, it will take the place of 1 because it will not be used anymore in the future.(See the string reference from 2 onwards). <i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                        <br>When 8 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>Then 2 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>When 7 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>Then 8 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>As 2 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>Then 3 comes, it will take the place of 7 because it will not be used anymore in the future. (As 7 comes before 2, it is chosen to be replaced by 3).<i class="fa fa-arrow-right"></i> 1 Page Fault.
+                                        <br>When 8 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                        <br>Finally when 3 comes again, it is already in memory. <i class="fa fa-arrow-right"></i> 0 Page Faults.
+                                    </p>
+                                    <p class="text-mutedd">
+                                        <U><B>Note 1 :</B></U>
+                                        <br>If a new page comes and it is not allocated in the memory and all the pages that are allocated are going to be used in the future so we choose the one which is not going to be used for the longest duration of
+                                        time in the future. (the furthest one in the rest of the reference string) </p>
+                                    <p class="text-mutedd">
+                                        <U><B>Note 2 :</B></U>
+                                        <br>If a new page comes and it is not allocated in the memory and we have two pages that are no longer used in the future so we choose the first one that entered and we replace it. </p>
+
+                                    <p class="text-mutedd">Optimal page replacement is perfect, but not possible in practice as the operating system cannot know future requests. The use of Optimal Page replacement is to set up a benchmark so that other replacement algorithms
+                                        can be analyzed against it.</p>
+                                </li>
+
+                                <a id="check_up_button" class="btn btn-primary btn-lg text-uppercase" href="./Paging_Algorithms.html" target="_blank">check up through your own example</a>
+
+                            </ol>
+                        </li>
+                        <li>Segmentation :
+                            <p class="text-mutedd">The process known as segmentation is a virtual process that creates address spaces of various sizes in a computer system, called <mark>segments</mark>. Each segment is a different virtual address space that directly corresponds
+                                to process objects. </br>When a process executes, segmentation assigns related data into segments for faster processing. The segmentation function maintains a segment table that includes physical addresses of the segment,
+                                size, and other data.</p>
+                            <img class="imgg" src="img/Segmentation.png" alt="">
+                            <p class="example-text">Segmentation speeds up a computer's information retrieval by assigning related data into a "segment table" between the CPU and the physical memory.</p>
+                            <p class="text-mutedd">Each segment stores the processes primary function, data structures, and utilities. The CPU keeps a segment map table for every process and memory blocks, along with segment identification and memory locations. The CPU generates
+                                virtual addresses for running processes.</br> Segmentation translates the CPU-generated virtual addresses into physical addresses that refer to a unique physical memory location. <br>The translation is not strictly one-to-one:
+                                different virtual addresses can map to the same physical address.
+                            </p>
+                            <h4 class="note">The problem with Segmentation :</h4>
+                            <p class="text-mutedd">The differentiation between virtual and physical addresses makes segmentation really powerful. However, it has the problem of <mark>external fragmentation</mark>. <br>As an example, imagine that we want to run a third copy
+                                of the program we saw above:</p>
+                            <img class="imgg" src="img/external_fragmentation.png" alt="">
+                            <p class="example-text">There is no way to map the third instance of the program to virtual memory without overlapping, even though there is more than enough free memory available. The problem is that we need continuous memory and can't use the small
+                                free chunks.</p>
+                            <p class="text-mutedd">One way to combat this fragmentation is to pause execution, move the used parts of the memory closer together, update the translation, and then resume execution, which is called <mark>compaction</mark>:</p>
+                            <img class="imgg" src="img/compaction.png" alt="">
+                            <p class="example-text">Now there is enough continuous space to start the third instance of our program.</p>
+                            <p class="text-mutedd">The disadvantage of this defragmentation process is that is needs to copy large amounts of memory which decreases performance. It also needs to be done regularly before the memory becomes too fragmented.<br>This makes performance
+                                <mark>unpredictable</mark>, since programs are paused at random times and might become <mark>unresponsive</mark>. <br>The fragmentation problem is one of the reasons that segmentation is no longer used by most systems.
+                                <br>In fact, segmentation is not even supported in 64-bit mode on x86 anymore. <br>Instead paging is used, which completely avoids the fragmentation problem.</p>
+                        </li>
+                        <li>
+                            Segmented Paging :
+                            <p class="text-mutedd">Some modern computers use a function called segmented paging. Main memory is divided into <mark>variably-sized segments</mark>, which are then divided into <mark>smaller fixed-size pages</mark> on disk. Each <mark>segment</mark>contains
+                                a <mark>page table</mark>, and there are multiple page tables per process.</p>
+
+                            <p class="text-mutedd">Each of the <mark>tables</mark> contains information on every <mark>segment page</mark>, while the <mark>segment table</mark> has information about every <mark>segment</mark>. Segment tables are mapped to page tables, and page
+                                tables are mapped to individual pages within a segment.</p>
+
+                            <p class="text-mutedd">Advantages include less memory usage, more flexibility on page sizes, simplified memory allocation, and an additional level of data access security over paging.<br>The process does not cause external fragmentation.</p>
+                        </li>
+                    </ol>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; START LEARNING 2020</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/learning.min.js"></script>
+
+    <!--sounds-->
+    <script src="js/sound_operatingsystem.js"></script>
+</body>
+
+</html>

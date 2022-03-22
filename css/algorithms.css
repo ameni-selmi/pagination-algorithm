@@ -1,0 +1,98 @@
+.my-labels {
+    line-height: 35px;
+    height: 10px;
+}
+
+table.PAGINGTable {
+    border: 2px solid #FFE359;
+    background-color: #EEE7DB;
+    width: 80%;
+    table-layout: fixed;
+    text-align: center;
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+table.PAGINGTable td,
+table.PAGINGTable th {
+    transition: all linear 0.5s;
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+    font-size: 18px;
+    font-family: cursive;
+    width: 10%;
+}
+
+table.PAGINGTable tbody td {
+    font-size: 13px;
+}
+
+table.PAGINGTable tr:nth-child(even) {
+    background: #FFF2AC;
+}
+
+table.PAGINGTable thead {
+    background: #FFE359;
+}
+
+table.PAGINGTable thead th {
+    font-size: 19px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #FFE359;
+}
+
+table.PAGINGTable thead th:first-child {
+    border-left: none;
+}
+
+#myTable td {
+    font-size: 14px;
+    width: 10%;
+    text-align: center;
+}
+
+#PageFaultTable {
+    border: none;
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    table-layout: fixed;
+}
+
+#PageFaultTable td {
+    border: none;
+    font-weight: bold;
+    background-color: white;
+    font-size: 14px;
+    width: 10%;
+    text-align: center;
+}
+
+#InformationTable {
+    border: none;
+    background-color: white;
+    table-layout: fixed;
+    width: 60%;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+#InformationTable th {
+    width: 15%;
+}
+
+#InformationTable td {
+    font-size: 15px;
+    width: 45%;
+}

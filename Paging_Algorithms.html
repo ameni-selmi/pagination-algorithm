@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/algorithms.css" rel="stylesheet">
+    <title>Paging Algorithms</title>
+    <link rel="stylesheet" href="./css/animate.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/learning.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <img src="./img/logos/writingPen.png" alt="">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Learning</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="./index.html">Home</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section">
+        <div class="container">
+            <form action="">
+                <br>
+                <div class="row">
+                    <div class="form-group col-4">
+                        <label class="my-labels">Please enter the reference string :  </label>
+                    </div>
+                    <div class="form-group col-4">
+                        <input type="text" id="chaine" class="form-control" required/><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-4">
+                        <label class="my-labels">Please enter the number of frames :</label>
+                    </div>
+                    <div class="form-group col-4">
+                        <input type="text" id="nbrcadres" class="form-control" required/></br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-auto">
+                        <label class="my-labels">Please choose an algorithm as follows :</label>
+                    </div>
+                    <div class="form-group col-5">
+                        <input type="button" class="btn btn-primary btn-lg text-uppercase" value="FIFO" onclick="afficher_FIFO()">
+                        <input type="button" class="btn btn-primary btn-lg text-uppercase" value="LRU" onclick="afficher_LRU()">
+                        <input type="button" class="btn btn-primary btn-lg text-uppercase" value="Optimal" onclick="afficher_Optimal()">
+                    </div>
+                </div>
+            </form>
+
+            <table class='PAGINGTable'>
+                <thead>
+                    <tr id="myRow"></tr>
+                </thead>
+            </table>
+            <table class='PAGINGTable' id='myTable'>
+            </table>
+            <table id="PageFaultTable">
+                <tr id="RowPF"></tr>
+            </table>
+            <table id="InformationTable">
+                <tr id="Row1">
+                    <th>
+
+                    </th>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr id="Row2">
+
+                </tr>
+                <tr id="Row3">
+
+                </tr>
+
+        </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/learning.min.js"></script>
+
+    <script type="text/javascript" src="./js/algorithms.js"></script>
+
+
+</body>
+
+</html>
