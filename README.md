@@ -1,4 +1,3 @@
-# web site for Paging Algorithms
 
 ## The problem with Paging 
 Paging causes the internal fragmentation which occurs because not every memory region is an exact multiple of the page size.
