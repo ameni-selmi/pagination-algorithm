@@ -1,7 +1,7 @@
 
 ## The problem with Paging 
 Paging causes the internal fragmentation which occurs because not every memory region is an exact multiple of the page size.
-Imagine a program of size 101 in the above example: It would still need three pages of size 50, so it would occupy 49 bytes more than needed.
+Imagine a program of size 101, it would still need three pages of size 50, so it would occupy 49 bytes more than needed.
 There are 3 algorithms of paging
 
 ### First In First Out (FIFO) 
